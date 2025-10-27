@@ -81,14 +81,8 @@ students = [
     }
 ]
 
-max = 0
-idx = 0
 
-for i, s in enumerate(students):
+def get_age(student):
+    return student["age"]
 
-    if s["age"] >= max:
-        max = s["age"]
-        idx = i
-
-
-print(students[idx]["name"])
+print(max(students, key=get_age))
